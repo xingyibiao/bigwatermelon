@@ -18520,7 +18520,8 @@
                 var i = a[e];
                 if (i) return t.replace("res/raw-assets/", i + "raw-assets/")
             }
-            return t
+            // return 'https://baidu.com/' + t
+			return t
         }, n.SubPackPipe = e.exports = l
     }), {
         "./pipeline": 158

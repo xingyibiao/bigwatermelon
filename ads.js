@@ -1,24 +1,24 @@
 var videoContent = document.getElementById('contentElement');
 
-var adDisplayContainer =
-    new google.ima.AdDisplayContainer(
-        document.getElementById('adContainer'),
-        videoContent);
+// var adDisplayContainer =
+//     new google.ima.AdDisplayContainer(
+//         document.getElementById('adContainer'),
+//         videoContent);
 // Must be done as the result of a user action on mobile
-adDisplayContainer.initialize();
+// adDisplayContainer.initialize();
 
 // Re-use this AdsLoader instance for the entire lifecycle of your page.
-var adsLoader = new google.ima.AdsLoader(adDisplayContainer);
-
-// Add event listeners
-adsLoader.addEventListener(
-    google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED,
-    onAdsManagerLoaded,
-    false);
-adsLoader.addEventListener(
-    google.ima.AdErrorEvent.Type.AD_ERROR,
-    onAdError,
-    false);
+// var adsLoader = new google.ima.AdsLoader(adDisplayContainer);
+//
+// // Add event listeners
+// adsLoader.addEventListener(
+//     google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED,
+//     onAdsManagerLoaded,
+//     false);
+// adsLoader.addEventListener(
+//     google.ima.AdErrorEvent.Type.AD_ERROR,
+//     onAdError,
+//     false);
 
 function onAdError(adErrorEvent) {
     console.log("adError");
@@ -81,20 +81,20 @@ function onAdError(adErrorEvent) {
 
 // An event listener to tell the SDK that our content video
 // is completed so the SDK can play any post-roll ads.
-var contentEndedListener = function() {
-    adsLoader.contentComplete();
-};
-videoContent.onended = contentEndedListener;
+// var contentEndedListener = function() {
+//     adsLoader.contentComplete();
+// };
+// videoContent.onended = contentEndedListener;
 
 // Request video ads.
-var preloader = new google.ima.AdsRequest();
-preloader.adTagUrl = 'https://googleads.g.doubleclick.net/pagead/ads?ad_type=video_image&client=ca-games-pub-8708616103041212&description_url=http%3A%2F%2Fwww.vsane.com&videoad_start_delay=-1&hl=zh_CN&max_ad_duration=15000';
+// var preloader = new google.ima.AdsRequest();
+// preloader.adTagUrl = 'https://googleads.g.doubleclick.net/pagead/ads?ad_type=video_image&client=ca-games-pub-8708616103041212&description_url=http%3A%2F%2Fwww.vsane.com&videoad_start_delay=-1&hl=zh_CN&max_ad_duration=15000';
 // Specify the linear and nonlinear slot sizes. This helps the SDK to
 // select the correct creative if multiple are returned.
-preloader.linearAdSlotWidth = 640;
-preloader.linearAdSlotHeight = 400;
-preloader.nonLinearAdSlotWidth = 640;
-preloader.nonLinearAdSlotHeight = 400;
+// preloader.linearAdSlotWidth = 640;
+// preloader.linearAdSlotHeight = 400;
+// preloader.nonLinearAdSlotWidth = 640;
+// preloader.nonLinearAdSlotHeight = 400;
 
 
 // showMyAds();
@@ -112,16 +112,16 @@ function showMyAds() {
     } else {
 
 
-        var winHeight = document.documentElement.clientHeight;
-        // document.getElementById("adContainer").style.height = winHeight-60+"px";
-        if (document.body.clientHeight > 700) {
-            document.getElementById("adContainer").style.height = winHeight - 85 + "px";
-        } else {
-            document.getElementById("adContainer").style.height = winHeight - 65 + "px";
-        }
+        // var winHeight = document.documentElement.clientHeight;
+        // // document.getElementById("adContainer").style.height = winHeight-60+"px";
+        // if (document.body.clientHeight > 700) {
+        //     document.getElementById("adContainer").style.height = winHeight - 85 + "px";
+        // } else {
+        //     document.getElementById("adContainer").style.height = winHeight - 65 + "px";
+        // }
 
         document.getElementById("adContainer").style.display = "block";
-        adsLoader.requestAds(preloader);
+        // adsLoader.requestAds(preloader);
 
     }
 
