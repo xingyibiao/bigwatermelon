@@ -1902,7 +1902,7 @@ window.__require = function e(t, n, o) {
                 }, t.prototype.update = function(e) {
                     this.UpdateScoreLabel(e), this.lerpCtrl && this.lerpNumFunc(this.passlevelYQ), this.levelPanel.children[1].getComponent(cc.Label).string = s.default.Instance.GetLevel().toString()
                 }, t.prototype.adsButtonFunc = function() {
-                	alert('g公主侬好鸭')
+                	alert('本游戏版本由DYS科学家群订制，如有冒犯，则G公主SM')
                     // window.location.href = "https://activity.doumobfour.club/horse?appkey=8fa2be346ab599d74b7b35732652ab4d&adSpaceKey=83e7c46c40f572de847a2d1b541f19b5&1=1"
                 }, t.prototype.TestPasslevel = function() {
                     var e = this;
